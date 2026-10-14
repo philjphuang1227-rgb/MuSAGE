@@ -42,7 +42,7 @@ The AbDesign labels are affinity-ratio-derived proxies as described in `external
 
 1. Clone MuSAGE and create the environment using the commands in the root README.
 2. The dataset files are already present in this folder; no separate data download is needed for the released SKEMPI training table or listed validation sets.
-3. Run `bash run_scripts/prepare_skempicl_features.sh` from the repository root to stage the fixed SKEMPI table/folds and regenerate model features.
+3. Run `bash run_scripts/prepare_skempicl_features.sh` from the repository root to stage the fixed SKEMPI table and fold files. Then follow the feature-generation commands in `docs/REPRODUCIBILITY.md` to create local caches.
 4. Run the training/evaluation commands in [the reproduction guide](../docs/REPRODUCIBILITY.md).
 5. Verify file integrity from the repository root:
 
@@ -51,4 +51,5 @@ The AbDesign labels are affinity-ratio-derived proxies as described in `external
    ```
 
 The cache builders download/load upstream pretrained ESM checkpoints and require the GearNet-Edge checkpoint separately. These third-party model weights and generated feature caches are intentionally not bundled here.
+
 
