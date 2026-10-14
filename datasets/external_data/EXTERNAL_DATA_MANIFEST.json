@@ -1,0 +1,43 @@
+{
+  "generated_at_cst": "2026-09-14 00:15:35 +0800",
+  "sources": {
+    "AB-Bind": "https://github.com/sarahsirin/AB-Bind-Database",
+    "AbDesign_v1": "https://staging.naturalantibody.com/ab-design/",
+    "AbDesign_v2": "https://staging.naturalantibody.com/ab-design2/"
+  },
+  "datasets": [
+    {
+      "dataset": "AB-Bind",
+      "raw_source": "datasets/external_data/AB-Bind-Database/AB-Bind_experimental_data.csv",
+      "raw_sha256": "078ab9b5c64459d5aa2e39cfdfbabdedcd946fa6bccfb49d81f59df2e175e29f",
+      "samples": "datasets/external_data/processed/AB-Bind/samples.csv",
+      "samples_sha256": "33a0ee6f62758b16e6b0937bd5fd58c2f679457cf359cabe88aa49cf26d3742b",
+      "report": "datasets/external_data/processed/AB-Bind/dedup_report.json",
+      "ready_rows": 851
+    },
+    {
+      "dataset": "AbDesign_v1",
+      "raw_source": "datasets/external_data/AbDesign_v1/datasets_mut.csv",
+      "raw_sha256": "a7f0c8b8284f5f16d14ab75096c1bd25b2e4eac6a55bcc964bcc5424fbde5f6e",
+      "samples": "datasets/external_data/processed/AbDesign_v1/samples.csv",
+      "samples_sha256": "f3cc2debffd1b395bdbdc3daae660f4bd3dd1b6ddb1373822e141a82a8d04405",
+      "report": "datasets/external_data/processed/AbDesign_v1/dedup_report.json",
+      "ready_rows": 654
+    },
+    {
+      "dataset": "AbDesign_v2",
+      "raw_source": "datasets/external_data/AbDesign_v2/pd_1/affinity.csv",
+      "raw_sha256": "800740bab0827cafad611fb0e24dc2140819ad9b7e04c17f82188180e7079ef4",
+      "samples": "datasets/external_data/processed/AbDesign_v2/samples.csv",
+      "samples_sha256": "74e6844ef95779fe311ee05a0ac9c0c791d4a788f085b359658c8323ba88dbd6",
+      "report": "datasets/external_data/processed/AbDesign_v2/dedup_report.json",
+      "ready_rows": 387
+    }
+  ],
+  "notes": [
+    "AB-Bind rows overlapping existing processed benchmarks were removed before external evaluation.",
+    "AbDesign v1 labels are ELISA mutant/WT affinity ratios converted to an RT-based ddG proxy at 298 K.",
+    "AbDesign v2 labels are measured Kd ratios converted to an RT-based ddG proxy at 298 K.",
+    "All external data are frozen-model validation only; no external labels were used for training or model selection."
+  ]
+}

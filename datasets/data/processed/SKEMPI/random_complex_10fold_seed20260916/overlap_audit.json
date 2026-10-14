@@ -1,0 +1,117 @@
+{
+  "samples": "data/processed/SKEMPI/samples_ready.csv",
+  "fold_dir": "data/processed/SKEMPI/random_complex_10fold_seed20260916",
+  "num_folds": 10,
+  "folds": [
+    {
+      "fold": 1,
+      "train_samples": 6118,
+      "validation_samples": 680,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 0,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 0,
+      "validation_pdb_overlap_fraction": 0.0
+    },
+    {
+      "fold": 2,
+      "train_samples": 6118,
+      "validation_samples": 680,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 1,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 67,
+      "validation_pdb_overlap_fraction": 0.09852941176470588
+    },
+    {
+      "fold": 3,
+      "train_samples": 6118,
+      "validation_samples": 680,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 2,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 36,
+      "validation_pdb_overlap_fraction": 0.052941176470588235
+    },
+    {
+      "fold": 4,
+      "train_samples": 6118,
+      "validation_samples": 680,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 1,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 2,
+      "validation_pdb_overlap_fraction": 0.0029411764705882353
+    },
+    {
+      "fold": 5,
+      "train_samples": 6118,
+      "validation_samples": 680,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 0,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 0,
+      "validation_pdb_overlap_fraction": 0.0
+    },
+    {
+      "fold": 6,
+      "train_samples": 6118,
+      "validation_samples": 680,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 0,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 0,
+      "validation_pdb_overlap_fraction": 0.0
+    },
+    {
+      "fold": 7,
+      "train_samples": 6118,
+      "validation_samples": 680,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 2,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 38,
+      "validation_pdb_overlap_fraction": 0.05588235294117647
+    },
+    {
+      "fold": 8,
+      "train_samples": 6118,
+      "validation_samples": 680,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 0,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 0,
+      "validation_pdb_overlap_fraction": 0.0
+    },
+    {
+      "fold": 9,
+      "train_samples": 6119,
+      "validation_samples": 679,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 0,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 0,
+      "validation_pdb_overlap_fraction": 0.0
+    },
+    {
+      "fold": 10,
+      "train_samples": 6119,
+      "validation_samples": 679,
+      "overlapping_complexes": 0,
+      "overlapping_pdbs": 0,
+      "validation_samples_with_complex_overlap": 0,
+      "validation_complex_overlap_fraction": 0.0,
+      "validation_samples_with_pdb_overlap": 0,
+      "validation_pdb_overlap_fraction": 0.0
+    }
+  ]
+}

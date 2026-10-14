@@ -1,0 +1,23 @@
+{
+  "samples": "data/processed/S4169/samples.csv",
+  "n_samples": 4160,
+  "num_folds": 5,
+  "seed": 20260916,
+  "split": "mutation_level_random",
+  "validation_sizes": {
+    "1": 832,
+    "2": 832,
+    "3": 832,
+    "4": 832,
+    "5": 832
+  },
+  "group_column": null,
+  "n_groups": 4160,
+  "validation_group_sizes": {
+    "1": 832,
+    "2": 832,
+    "3": 832,
+    "4": 832,
+    "5": 832
+  }
+}

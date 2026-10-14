@@ -1,0 +1,542 @@
+{
+  "source": "https://github.com/sarahsirin/AB-Bind-Database",
+  "raw_rows": 1101,
+  "parsed_ready_before_dedup": 1063,
+  "ready_after_exact_dedup_and_overlap_removal": 851,
+  "parse_or_mapping_errors": 38,
+  "overlap_with_existing_benchmarks": 209,
+  "within_source_exact_duplicates_removed": 3,
+  "pdb_files_available": 32,
+  "error_examples": [
+    {
+      "row": 137,
+      "pdb_id": "1JRH",
+      "mutation": "I:A103L,I:V104M,I:R106L,I:D107K",
+      "error": "residue I:106 absent from ATOM records"
+    },
+    {
+      "row": 142,
+      "pdb_id": "1JRH",
+      "mutation": "I:N48V,I:delta(I:G50,I:V51,I:K52),I:N53S,I:S54G,I:E55S",
+      "error": "unsupported mutation notation: 'I:delta(I:G50'"
+    },
+    {
+      "row": 321,
+      "pdb_id": "1N8Z",
+      "mutation": "H:W95A,H:Y100aA",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 322,
+      "pdb_id": "1N8Z",
+      "mutation": "L:H91A,H:Y100aA",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 324,
+      "pdb_id": "1N8Z",
+      "mutation": "L:N30S,L:H91F,L:Y92W,L:T94S,H:D98W,H:Y100aF,H:Y102V",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 335,
+      "pdb_id": "1N8Z",
+      "mutation": "H:Y100aA",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 336,
+      "pdb_id": "1N8Z",
+      "mutation": "H:Y100aF",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 337,
+      "pdb_id": "1N8Z",
+      "mutation": "H:Y100aF",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 714,
+      "pdb_id": "2NY7",
+      "mutation": "H:P97E,H:Y98W,H:S99G,H:D100aD,H:D100bQ,H:S100cR,H:P100dR,H:Q100eY",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 715,
+      "pdb_id": "2NY7",
+      "mutation": "H:P97E,H:Y98W,H:S99G,H:D100aD,H:D100bQ,H:S100cV,H:P100dR,H:Q100eY",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 716,
+      "pdb_id": "2NY7",
+      "mutation": "H:P97E,H:Y98W,H:S99G,H:D100aE,H:D100bM,H:S100cF,H:P100dR,H:Q100eY",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 717,
+      "pdb_id": "2NY7",
+      "mutation": "H:P97E,H:Y98W,H:S99G,H:D100aE,H:D100bM,H:S100cR,H:P100dR,H:Q100eF",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 718,
+      "pdb_id": "2NY7",
+      "mutation": "H:P97E,H:Y98W,H:S99G,H:D100aE,H:D100bQ,H:S100cF,H:P100dR,H:Q100eF",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 719,
+      "pdb_id": "2NY7",
+      "mutation": "H:P97E,H:Y98W,H:S99G,H:D100aH,H:D100bQ,H:S100cR,H:P100dR,H:Q100eY",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 720,
+      "pdb_id": "2NY7",
+      "mutation": "H:P97E,H:Y98W,H:S99G,H:D100aT,H:D100bQ,H:S100cR,H:P100dR,H:Q100eF",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 725,
+      "pdb_id": "2NY7",
+      "mutation": "L:S28K,L:I28aE,L:R29F,L:S30G",
+      "error": "residue L:28a absent from ATOM records"
+    },
+    {
+      "row": 726,
+      "pdb_id": "2NY7",
+      "mutation": "L:S28P,L:I28aL,L:R29H,L:S30R,L:R31A",
+      "error": "residue L:28a absent from ATOM records"
+    },
+    {
+      "row": 727,
+      "pdb_id": "2NY7",
+      "mutation": "L:S28Q,L:I28aL,L:R29D,L:S30G,L:R31S",
+      "error": "residue L:28a absent from ATOM records"
+    },
+    {
+      "row": 728,
+      "pdb_id": "2NY7",
+      "mutation": "L:S28T,L:I28aV,L:R29Y,L:S30R,L:R31D",
+      "error": "residue L:28a absent from ATOM records"
+    },
+    {
+      "row": 802,
+      "pdb_id": "3BDY",
+      "mutation": "H:Y100aA",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 806,
+      "pdb_id": "3BDY",
+      "mutation": "L:D27aA",
+      "error": "residue L:27a absent from ATOM records"
+    },
+    {
+      "row": 810,
+      "pdb_id": "3BDY",
+      "mutation": "L:I27bA",
+      "error": "residue L:27b absent from ATOM records"
+    },
+    {
+      "row": 812,
+      "pdb_id": "3BDY",
+      "mutation": "L:P27cA",
+      "error": "residue L:27c absent from ATOM records"
+    },
+    {
+      "row": 813,
+      "pdb_id": "3BDY",
+      "mutation": "L:R27dA",
+      "error": "residue L:27d absent from ATOM records"
+    },
+    {
+      "row": 836,
+      "pdb_id": "3BE1",
+      "mutation": "H:Y100aA",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 840,
+      "pdb_id": "3BE1",
+      "mutation": "L:D27aA",
+      "error": "residue L:27a absent from ATOM records"
+    },
+    {
+      "row": 844,
+      "pdb_id": "3BE1",
+      "mutation": "L:I27bA",
+      "error": "residue L:27b absent from ATOM records"
+    },
+    {
+      "row": 846,
+      "pdb_id": "3BE1",
+      "mutation": "L:P27cA",
+      "error": "residue L:27c absent from ATOM records"
+    },
+    {
+      "row": 847,
+      "pdb_id": "3BE1",
+      "mutation": "L:R27dA",
+      "error": "residue L:27d absent from ATOM records"
+    },
+    {
+      "row": 858,
+      "pdb_id": "3BN9",
+      "mutation": "A:D60aA",
+      "error": "residue A:60a absent from ATOM records"
+    },
+    {
+      "row": 859,
+      "pdb_id": "3BN9",
+      "mutation": "A:D60bA",
+      "error": "residue A:60b absent from ATOM records"
+    },
+    {
+      "row": 862,
+      "pdb_id": "3BN9",
+      "mutation": "A:F60eA",
+      "error": "residue A:60e absent from ATOM records"
+    },
+    {
+      "row": 874,
+      "pdb_id": "3BN9",
+      "mutation": "A:Q221aA",
+      "error": "residue A:221a absent from ATOM records"
+    },
+    {
+      "row": 877,
+      "pdb_id": "3BN9",
+      "mutation": "A:R60cA",
+      "error": "residue A:60c absent from ATOM records"
+    },
+    {
+      "row": 878,
+      "pdb_id": "3BN9",
+      "mutation": "A:R60fA",
+      "error": "residue A:60f absent from ATOM records"
+    },
+    {
+      "row": 883,
+      "pdb_id": "3BN9",
+      "mutation": "A:Y60gA",
+      "error": "residue A:60g absent from ATOM records"
+    },
+    {
+      "row": 885,
+      "pdb_id": "3BN9",
+      "mutation": "H:Q100aV",
+      "error": "residue H:100a absent from ATOM records"
+    },
+    {
+      "row": 1094,
+      "pdb_id": "HM_3BN9",
+      "mutation": "H:Q100aV",
+      "error": "residue H:100a absent from ATOM records"
+    }
+  ],
+  "overlap_examples": [
+    {
+      "row": 68,
+      "pdb_id": "1DQJ",
+      "mutation": "C:D101A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 69,
+      "pdb_id": "1DQJ",
+      "mutation": "C:K96A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 70,
+      "pdb_id": "1DQJ",
+      "mutation": "C:K97A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 71,
+      "pdb_id": "1DQJ",
+      "mutation": "C:L75A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 72,
+      "pdb_id": "1DQJ",
+      "mutation": "C:N93A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 73,
+      "pdb_id": "1DQJ",
+      "mutation": "C:R21A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 74,
+      "pdb_id": "1DQJ",
+      "mutation": "C:S100A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 75,
+      "pdb_id": "1DQJ",
+      "mutation": "C:T89A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 76,
+      "pdb_id": "1DQJ",
+      "mutation": "C:W62A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 77,
+      "pdb_id": "1DQJ",
+      "mutation": "C:W63A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 78,
+      "pdb_id": "1DQJ",
+      "mutation": "C:Y20A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 89,
+      "pdb_id": "1DVF",
+      "mutation": "A:Y32A,D:R106A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 90,
+      "pdb_id": "1DVF",
+      "mutation": "A:Y49A,D:H33A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 91,
+      "pdb_id": "1DVF",
+      "mutation": "A:Y49A,D:N55A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 92,
+      "pdb_id": "1DVF",
+      "mutation": "B:D100A,D:D52A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 93,
+      "pdb_id": "1DVF",
+      "mutation": "B:D100A,D:H33A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 94,
+      "pdb_id": "1DVF",
+      "mutation": "B:D100A,D:N55A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 95,
+      "pdb_id": "1DVF",
+      "mutation": "B:D54A,C:Y49A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 96,
+      "pdb_id": "1DVF",
+      "mutation": "B:D58A,D:Q104A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 97,
+      "pdb_id": "1DVF",
+      "mutation": "B:E98A,D:Y102A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 98,
+      "pdb_id": "1DVF",
+      "mutation": "B:N56A,D:H33A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 99,
+      "pdb_id": "1DVF",
+      "mutation": "B:N56A,D:N55A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 100,
+      "pdb_id": "1DVF",
+      "mutation": "B:N56A,D:Q104A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 101,
+      "pdb_id": "1DVF",
+      "mutation": "B:W52A,D:Q104A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 102,
+      "pdb_id": "1DVF",
+      "mutation": "A:H30A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 103,
+      "pdb_id": "1DVF",
+      "mutation": "A:S93A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 104,
+      "pdb_id": "1DVF",
+      "mutation": "A:W92A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 105,
+      "pdb_id": "1DVF",
+      "mutation": "A:Y32A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 106,
+      "pdb_id": "1DVF",
+      "mutation": "A:Y49A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 107,
+      "pdb_id": "1DVF",
+      "mutation": "A:Y49A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 108,
+      "pdb_id": "1DVF",
+      "mutation": "A:Y50A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 109,
+      "pdb_id": "1DVF",
+      "mutation": "B:D100A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 110,
+      "pdb_id": "1DVF",
+      "mutation": "B:D54A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 111,
+      "pdb_id": "1DVF",
+      "mutation": "B:D58A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 112,
+      "pdb_id": "1DVF",
+      "mutation": "B:E98A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 113,
+      "pdb_id": "1DVF",
+      "mutation": "B:N56A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 114,
+      "pdb_id": "1DVF",
+      "mutation": "B:R99A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 115,
+      "pdb_id": "1DVF",
+      "mutation": "B:T30A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 116,
+      "pdb_id": "1DVF",
+      "mutation": "B:W52A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 117,
+      "pdb_id": "1DVF",
+      "mutation": "B:Y101F",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 118,
+      "pdb_id": "1DVF",
+      "mutation": "B:Y32A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 119,
+      "pdb_id": "1DVF",
+      "mutation": "C:Y49A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 120,
+      "pdb_id": "1DVF",
+      "mutation": "D:D52A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 121,
+      "pdb_id": "1DVF",
+      "mutation": "D:H33A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 122,
+      "pdb_id": "1DVF",
+      "mutation": "D:I101A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 123,
+      "pdb_id": "1DVF",
+      "mutation": "D:K30A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 124,
+      "pdb_id": "1DVF",
+      "mutation": "D:N55A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 125,
+      "pdb_id": "1DVF",
+      "mutation": "D:Q104A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 126,
+      "pdb_id": "1DVF",
+      "mutation": "D:R106A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    },
+    {
+      "row": 127,
+      "pdb_id": "1DVF",
+      "mutation": "D:Y102A",
+      "existing_source": "datasets/data/processed/SKEMPI/samples_ready.csv"
+    }
+  ]
+}

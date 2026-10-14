@@ -1,0 +1,260 @@
+{
+  "samples": "data/processed/M1707/samples.csv",
+  "mmseqs": "mmseqs",
+  "min_seq_identity": 0.3,
+  "coverage": 0.8,
+  "criterion": "complexes are connected when any chain belongs to the same MMseqs2 cluster",
+  "n_samples": 1707,
+  "n_complexes": 121,
+  "n_chain_sequences": 296,
+  "n_sequence_clusters": 145,
+  "n_homology_components": 54,
+  "largest_components": [
+    {
+      "complexes": 31,
+      "samples": 392,
+      "members": [
+        "1AHW_AB_C",
+        "1BJ1_HL_VW",
+        "1CZ8_HL_VW",
+        "1DQJ_AB_C",
+        "1DVF_AB_CD",
+        "1GC1_G_C",
+        "1JRH_LH_I",
+        "1MHP_HL_A",
+        "1MLC_AB_E",
+        "1N8Z_AB_C",
+        "1VFB_AB_C",
+        "1YQV_HL_Y",
+        "1YY9_CD_A",
+        "2B2X_HL_A",
+        "2NY7_HL_G",
+        "2NYY_DC_A",
+        "2NZ9_DC_A",
+        "3BDY_HL_V",
+        "3BE1_HL_A",
+        "3G6D_LH_A",
+        "3HFM_HL_Y",
+        "3IDX_HL_G",
+        "3L5X_A_HL",
+        "3LZF_AB_HL",
+        "3MZW_A_B",
+        "3NGB_HL_G",
+        "4JPK_HL_A",
+        "4KRL_A_B",
+        "4KRO_A_B",
+        "4KRP_A_B",
+        "5C6T_HL_A"
+      ]
+    },
+    {
+      "complexes": 7,
+      "samples": 268,
+      "members": [
+        "1GL0_E_I",
+        "1GL1_A_I",
+        "1PPF_E_I",
+        "1R0R_E_I",
+        "1TM1_E_I",
+        "1Y4A_E_I",
+        "3SGB_E_I"
+      ]
+    },
+    {
+      "complexes": 9,
+      "samples": 186,
+      "members": [
+        "1C1Y_A_B",
+        "1GUA_A_B",
+        "1HE8_A_B",
+        "1K8R_A_B",
+        "1LFD_A_B",
+        "3KUD_A_B",
+        "4G0N_A_B",
+        "5UFE_A_B",
+        "5UFQ_A_C"
+      ]
+    },
+    {
+      "complexes": 3,
+      "samples": 155,
+      "members": [
+        "1JTG_A_B",
+        "1XXM_A_C",
+        "2G2U_A_B"
+      ]
+    },
+    {
+      "complexes": 4,
+      "samples": 93,
+      "members": [
+        "1B2S_A_D",
+        "1B2U_A_D",
+        "1B3S_A_D",
+        "1BRS_A_D"
+      ]
+    },
+    {
+      "complexes": 3,
+      "samples": 86,
+      "members": [
+        "1A22_A_B",
+        "1BP3_A_B",
+        "3MZG_A_B"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 83,
+      "members": [
+        "1KBH_A_B"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 61,
+      "members": [
+        "3S9D_A_B"
+      ]
+    },
+    {
+      "complexes": 3,
+      "samples": 59,
+      "members": [
+        "2C5D_AB_CD",
+        "2C5D_A_C",
+        "4RA0_A_C"
+      ]
+    },
+    {
+      "complexes": 3,
+      "samples": 52,
+      "members": [
+        "1OHZ_A_B",
+        "2CCL_A_B",
+        "2VN5_A_B"
+      ]
+    },
+    {
+      "complexes": 4,
+      "samples": 50,
+      "members": [
+        "1REW_AB_C",
+        "2QJ9_AB_C",
+        "2QJA_AB_C",
+        "2QJB_AB_C"
+      ]
+    },
+    {
+      "complexes": 2,
+      "samples": 30,
+      "members": [
+        "1A4Y_A_B",
+        "1Z7X_W_X"
+      ]
+    },
+    {
+      "complexes": 2,
+      "samples": 24,
+      "members": [
+        "4NKQ_C_AB",
+        "4RS1_A_B"
+      ]
+    },
+    {
+      "complexes": 2,
+      "samples": 23,
+      "members": [
+        "1EMV_A_B",
+        "2WPT_A_B"
+      ]
+    },
+    {
+      "complexes": 2,
+      "samples": 16,
+      "members": [
+        "4UYP_A_D",
+        "4UYQ_A_B"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 12,
+      "members": [
+        "3VR6_ABCDEF_GH"
+      ]
+    },
+    {
+      "complexes": 3,
+      "samples": 10,
+      "members": [
+        "1B41_A_B",
+        "1FSS_A_B",
+        "1MAH_A_F"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 9,
+      "members": [
+        "1QAB_ABCD_E"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 9,
+      "members": [
+        "4K71_A_BC"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 7,
+      "members": [
+        "1MQ8_A_B"
+      ]
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_n": 1315,
+      "validation_n": 392,
+      "train_complexes": 90,
+      "validation_complexes": 31,
+      "complex_overlap": 0
+    },
+    {
+      "fold": 2,
+      "train_n": 1378,
+      "validation_n": 329,
+      "train_complexes": 98,
+      "validation_complexes": 23,
+      "complex_overlap": 0
+    },
+    {
+      "fold": 3,
+      "train_n": 1378,
+      "validation_n": 329,
+      "train_complexes": 95,
+      "validation_complexes": 26,
+      "complex_overlap": 0
+    },
+    {
+      "fold": 4,
+      "train_n": 1378,
+      "validation_n": 329,
+      "train_complexes": 103,
+      "validation_complexes": 18,
+      "complex_overlap": 0
+    },
+    {
+      "fold": 5,
+      "train_n": 1379,
+      "validation_n": 328,
+      "train_complexes": 98,
+      "validation_complexes": 23,
+      "complex_overlap": 0
+    }
+  ]
+}

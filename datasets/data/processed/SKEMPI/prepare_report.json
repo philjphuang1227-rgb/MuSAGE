@@ -1,0 +1,11 @@
+{
+  "source_csv": "SKEMPI v2.0 public source table (download from the official source)",
+  "pdb_dir": "datasets/data/raw/pdb",
+  "raw_rows": 7085,
+  "unique_samples": 7085,
+  "status_counts": {
+    "ready": 6798,
+    "error": 287
+  },
+  "pdb_files": 690
+}

@@ -1,0 +1,33 @@
+{
+  "samples": "data/processed/SKEMPI/samples_ready.csv",
+  "n_samples": 6798,
+  "num_folds": 10,
+  "seed": 20260916,
+  "split": "complex_level_random",
+  "validation_sizes": {
+    "1": 680,
+    "2": 680,
+    "3": 680,
+    "4": 680,
+    "5": 680,
+    "6": 680,
+    "7": 680,
+    "8": 680,
+    "9": 679,
+    "10": 679
+  },
+  "group_column": "complex_id",
+  "n_groups": 344,
+  "validation_group_sizes": {
+    "1": 34,
+    "2": 34,
+    "3": 34,
+    "4": 34,
+    "5": 34,
+    "6": 34,
+    "7": 34,
+    "8": 36,
+    "9": 35,
+    "10": 35
+  }
+}

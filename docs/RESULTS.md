@@ -10,4 +10,5 @@ The values below are the arithmetic mean and sample standard deviation across fi
 | MAE (kcal/mol) | 1.0805 | 0.0063 |
 | AUROC | 0.7509 | 0.0024 |
 
-For each seed, the table first averages its ten fold metrics. It then reports the mean and sample SD of the five seed means. Pooled held-out metrics and mutation-count strata are available in the Zenodo archive. The sign convention for the target is `RT ln(Kd_WT / Kd_mut)`.
+For each seed, the table first averages its ten fold metrics. It then reports the mean and sample SD of the five seed means. Pooled held-out metrics and mutation-count strata are available in the Zenodo archive. For comparisons across datasets, follow the target direction and units defined by the source dataset.
+

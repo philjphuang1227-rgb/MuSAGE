@@ -1,0 +1,279 @@
+{
+  "samples": "data/processed/S4169/samples.csv",
+  "mmseqs": "mmseqs",
+  "min_seq_identity": 0.3,
+  "coverage": 0.8,
+  "criterion": "complexes are connected when any chain belongs to the same MMseqs2 cluster",
+  "n_samples": 4160,
+  "n_complexes": 318,
+  "n_chain_sequences": 318,
+  "n_sequence_clusters": 162,
+  "n_homology_components": 162,
+  "largest_components": [
+    {
+      "complexes": 20,
+      "samples": 779,
+      "members": [
+        "1CHO_EFG_I",
+        "1CSO_E_I",
+        "1CT0_E_I",
+        "1CT2_E_I",
+        "1CT4_E_I",
+        "1PPF_E_I",
+        "1R0R_E_I",
+        "1SGD_E_I",
+        "1SGE_E_I",
+        "1SGN_E_I",
+        "1SGP_E_I",
+        "1SGQ_E_I",
+        "1SGY_E_I",
+        "2NU0_E_I",
+        "2NU1_E_I",
+        "2NU2_E_I",
+        "2NU4_E_I",
+        "2SGP_E_I",
+        "2SGQ_E_I",
+        "3SGB_E_I"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 240,
+      "members": [
+        "3BT1_A_U"
+      ]
+    },
+    {
+      "complexes": 16,
+      "samples": 238,
+      "members": [
+        "1BJ1_HL_VW",
+        "1DQJ_AB_C",
+        "1MHP_HL_A",
+        "1NCA_N_LH",
+        "1XGP_AB_C",
+        "1XGQ_AB_C",
+        "1XGR_AB_C",
+        "1XGT_AB_C",
+        "1XGU_AB_C",
+        "1YY9_CD_A",
+        "3G6D_LH_A",
+        "3N85_A_LH",
+        "3NGB_HL_G",
+        "3SE8_HL_G",
+        "3SE9_HL_G",
+        "4I77_HL_Z"
+      ]
+    },
+    {
+      "complexes": 9,
+      "samples": 174,
+      "members": [
+        "1AO7_ABC_DE",
+        "1LP9_ABC_EF",
+        "1OGA_ABC_DE",
+        "2BNR_ABC_DE",
+        "2J8U_ABC_EF",
+        "2JCC_ABC_EF",
+        "2UWE_ABC_EF",
+        "3H9S_ABC_DE",
+        "4L3E_ABC_DE"
+      ]
+    },
+    {
+      "complexes": 2,
+      "samples": 143,
+      "members": [
+        "1A22_A_B",
+        "3NCC_A_B"
+      ]
+    },
+    {
+      "complexes": 4,
+      "samples": 112,
+      "members": [
+        "3C60_CD_AB",
+        "3QIB_ABP_CD",
+        "4P23_CD_AB",
+        "4P5T_CD_AB"
+      ]
+    },
+    {
+      "complexes": 6,
+      "samples": 93,
+      "members": [
+        "1EAW_A_B",
+        "1F5R_A_I",
+        "1FY8_E_I",
+        "3BN9_B_CD",
+        "3NPS_A_BC",
+        "3TGK_E_I"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 89,
+      "members": [
+        "1DAN_HL_UT"
+      ]
+    },
+    {
+      "complexes": 6,
+      "samples": 81,
+      "members": [
+        "1BD2_ABC_DE",
+        "1MI5_ABC_DE",
+        "2VLR_ABC_DE",
+        "3QDG_ABC_DE",
+        "4FTV_ABC_DE",
+        "4OZG_ABJ_GH"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 81,
+      "members": [
+        "3S9D_A_B"
+      ]
+    },
+    {
+      "complexes": 2,
+      "samples": 72,
+      "members": [
+        "1YQV_HL_Y",
+        "3HFM_HL_Y"
+      ]
+    },
+    {
+      "complexes": 11,
+      "samples": 71,
+      "members": [
+        "1CBW_FGH_I",
+        "2FTL_E_I",
+        "3BTD_E_I",
+        "3BTE_E_I",
+        "3BTF_E_I",
+        "3BTG_E_I",
+        "3BTH_E_I",
+        "3BTM_E_I",
+        "3BTQ_E_I",
+        "3BTT_E_I",
+        "3BTW_E_I"
+      ]
+    },
+    {
+      "complexes": 2,
+      "samples": 61,
+      "members": [
+        "1JTD_A_B",
+        "3QHY_A_B"
+      ]
+    },
+    {
+      "complexes": 3,
+      "samples": 60,
+      "members": [
+        "1JTG_A_B",
+        "2G2W_A_B",
+        "3N4I_A_B"
+      ]
+    },
+    {
+      "complexes": 3,
+      "samples": 57,
+      "members": [
+        "1KIR_AB_C",
+        "1NMB_N_LH",
+        "1VFB_AB_C"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 54,
+      "members": [
+        "1GC1_G_C"
+      ]
+    },
+    {
+      "complexes": 9,
+      "samples": 50,
+      "members": [
+        "1E96_A_B",
+        "1GRN_A_B",
+        "1GUA_A_B",
+        "1K8R_A_B",
+        "3EG5_A_B",
+        "3KUD_A_B",
+        "3Q3J_A_B",
+        "5UFE_A_B",
+        "5UFQ_A_C"
+      ]
+    },
+    {
+      "complexes": 2,
+      "samples": 49,
+      "members": [
+        "2NYY_DC_A",
+        "2NZ9_DC_A"
+      ]
+    },
+    {
+      "complexes": 3,
+      "samples": 48,
+      "members": [
+        "1EMV_A_B",
+        "1FR2_A_B",
+        "2GYK_A_B"
+      ]
+    },
+    {
+      "complexes": 1,
+      "samples": 48,
+      "members": [
+        "1C4Z_ABC_D"
+      ]
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_n": 3328,
+      "validation_n": 832,
+      "train_complexes": 277,
+      "validation_complexes": 41,
+      "complex_overlap": 0
+    },
+    {
+      "fold": 2,
+      "train_n": 3328,
+      "validation_n": 832,
+      "train_complexes": 245,
+      "validation_complexes": 73,
+      "complex_overlap": 0
+    },
+    {
+      "fold": 3,
+      "train_n": 3328,
+      "validation_n": 832,
+      "train_complexes": 239,
+      "validation_complexes": 79,
+      "complex_overlap": 0
+    },
+    {
+      "fold": 4,
+      "train_n": 3328,
+      "validation_n": 832,
+      "train_complexes": 252,
+      "validation_complexes": 66,
+      "complex_overlap": 0
+    },
+    {
+      "fold": 5,
+      "train_n": 3328,
+      "validation_n": 832,
+      "train_complexes": 259,
+      "validation_complexes": 59,
+      "complex_overlap": 0
+    }
+  ]
+}

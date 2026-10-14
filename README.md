@@ -1,19 +1,19 @@
+# MuSAGE
+
 <p align="center">
   <img src="assets/musage_architecture.png" alt="MuSAGE architecture" width="100%">
 </p>
 
-# MuSAGE
+MuSAGE predicts mutation-associated changes in protein–protein binding affinity from sequence and structure inputs.
 
-MuSAGE is a mutation-aware sequence–structure model for predicting changes in protein–protein binding affinity from mutations.
+## Getting started
 
-## Getting started with this repository
-
-### Main requirements
+### Requirements
 
 - Python 3.10
-- PyTorch 2.x with CUDA 12.1 for GPU training (CPU is supported for small jobs)
-- NumPy, SciPy, scikit-learn, and fair-esm
-- TorchDrug 0.2.1 when regenerating GearNet-Edge features
+- PyTorch 2.x; CUDA 12.1 is recommended for GPU training
+- NumPy, SciPy, scikit-learn, fair-esm
+- TorchDrug 0.2.1 for GearNet-Edge feature generation
 
 ### Installation
 
@@ -25,36 +25,43 @@ conda activate musage
 pip install -e .
 ```
 
-## Download data
+## Datasets
 
-The `datasets/` directory is reserved for the training and external-validation inputs used by the released experiments. See [datasets/README.md](datasets/README.md) for benchmark sources, the current data availability, and preparation details.
+Training benchmark inputs, fixed split files, and the external-validation inputs are included under [`datasets/`](datasets/README.md), following the data-first layout used by DSSA-PPI. The included tables and structures are ready to use; their checksums and upstream sources are listed in the dataset guide.
 
-The current training protocol uses SKEMPI v2.0 with complex-level ten-fold cross-validation. Follow [the reproducibility guide](docs/REPRODUCIBILITY.md) to prepare structures, features, and folds.
+To stage the released SKEMPI sample table and fold assignments for the feature/training scripts:
+
+```bash
+bash run_scripts/prepare_skempicl_features.sh
+```
+
+The feature-generation commands then build graph and pretrained sequence/structure features locally. The staging script does not download or redistribute upstream pretrained model weights. See [data provenance](docs/DATA_PROVENANCE.md) and [reproduction steps](docs/REPRODUCIBILITY.md).
 
 ## Training and evaluation
 
-Run the five-seed, ten-fold SKEMPI complex-level experiment:
+Run the five-seed, ten-fold SKEMPI complex-level training protocol:
 
 ```bash
 bash run_scripts/train_skempicl_10fold.sh
 ```
 
-Aggregate the five seed-specific out-of-fold predictions:
+Aggregate fold-matched out-of-fold predictions for the five seeds:
 
 ```bash
 bash run_scripts/aggregate_skempicl_oof.sh
 ```
 
-The complete commands, feature-generation steps, fold handling, and evaluation protocol are in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
+External validation inputs and scoring notes are in [`validation/`](validation/README.md). The external sets are frozen evaluation sets and were not used for training or model selection.
 
 ## Model weights and results
 
-The released fold checkpoints and computed results are packaged separately from the source code. The Zenodo record link will be added after the upload is complete. Use the held-out prediction files or the checkpoint matching each sample's held-out fold when reproducing benchmark metrics.
+The 50 final SKEMPI fold checkpoints, fold predictions, and run summaries are packaged for Zenodo. The Zenodo link will be added here after the draft upload is complete. Checkpoint identities and integrity instructions are documented in [`zenodo/README.md`](zenodo/README.md).
 
 ## Architecture
 
-The author-provided architecture diagram is included unchanged at [assets/musage_architecture.png](assets/musage_architecture.png). Implementation details and tensor conventions are described in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+The author-provided architecture figure is included unchanged at [assets/musage_architecture.png](assets/musage_architecture.png). See [architecture notes](docs/ARCHITECTURE.md) and [reproduction steps](docs/REPRODUCIBILITY.md) for model inputs and training details.
 
 ## License
 
-No project license has been selected. Dataset and upstream model terms remain those of their respective sources.
+A project license has not been selected. Dataset and upstream model terms remain those of their respective sources.
+

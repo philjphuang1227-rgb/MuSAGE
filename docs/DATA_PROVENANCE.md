@@ -1,23 +1,29 @@
-# Data and pretrained-model provenance
+# Data provenance
 
-## SKEMPI v2.0
+## Included training data
 
-The primary benchmark is SKEMPI v2.0. Its mutation/affinity table and cleaned PDB structures are available from the [official SKEMPI v2.0 download page](https://life.bsc.es/pid/skempi2/database/index). The source table is semicolon-delimited and includes fields such as `Mutation(s)_cleaned` or `Mutation(s)_PDB`, `Affinity_wt`, `Affinity_mut`, and optional `Temperature`.
+The repository contains the SKEMPI v2.0 source table, the WT structures used by the prepared benchmark samples, ready-to-train sample tables, and fixed fold assignments under [`datasets/data/`](../datasets/README.md). The preparation report records the original source and row counts with cluster-specific paths removed. The source is also available from the [official SKEMPI v2.0 database](https://life.bsc.es/pid/skempi2/database/index).
 
-The release preparation code parses complex structures, checks each wild-type amino acid against its PDB residue, records stable sample IDs, and derives the training target. Training and external-validation benchmark inputs are being synchronized from the project cluster into [`datasets/`](../datasets/README.md). Until that sync is complete, use each benchmark's upstream source and the commands in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+S4169, S1131, and M1707 source fold CSVs and prepared sample/fold tables are included under `datasets/data/`; their upstream project is [DSSA-PPI](https://github.com/Agitw/DSSA-PPI). Fixed split files and homology metadata are included so the benchmark definitions can be inspected and reused.
 
-## ESM-2
+## Included external validation data
 
-The model uses the ESM-2 t33 650M UR50D model via [fair-esm](https://github.com/facebookresearch/esm). The feature scripts download/load the model as required. Record its version and layer (33) when regenerating features. ESM model weights are upstream artifacts and are not included in the MuSAGE repository or Zenodo archive.
+AB-Bind and AbDesign v1/v2 source tables, the required WT structures, processed sample tables, and deduplication audits are included under `datasets/external_data/`. Upstream sources:
 
-## ESM-IF1
+- [AB-Bind-Database](https://github.com/sarahsirin/AB-Bind-Database)
+- [AbDesign](https://staging.naturalantibody.com/ab-design/)
+- [AbDesign v2](https://staging.naturalantibody.com/ab-design2/)
 
-The structural sequence prior is ESM-IF1 GVP4 t16 142M, from the same [fair-esm project](https://github.com/facebookresearch/esm). The feature-generation script takes the official checkpoint path explicitly and caches residue/site features. Do not replace this checkpoint with a different ESM-IF1 variant when reproducing the released run.
+These are frozen external evaluations; their labels were not used for model fitting or model selection. Dataset terms continue to be governed by the respective upstream sources. The AbDesign tables contain affinity-ratio-derived proxy labels; see `datasets/external_data/EXTERNAL_DATA_MANIFEST.json`.
 
-## GearNet-Edge
+## Pretrained feature models
 
-The auxiliary structural prior uses the official GearNet-Edge Multiview Contrast checkpoint. The upstream [GearNet project](https://github.com/DeepGraphLearning/GearNet) links the [pretrained weights on Zenodo](https://zenodo.org/records/7723075), including `mc_gearnet_edge.pth`. The feature builder records the upstream model commit `28bf75f5dfb6cd7b9bf4394d153a87f69bddf1a6`. Install the matching TorchDrug/GearNet dependencies separately; these third-party weights and sources are not redistributed by MuSAGE.
+- **ESM-2:** t33 650M UR50D via [fair-esm](https://github.com/facebookresearch/esm).
+- **ESM-IF1:** GVP4 t16 142M via [fair-esm](https://github.com/facebookresearch/esm).
+- **GearNet-Edge:** Multiview Contrast checkpoint from [GearNet](https://github.com/DeepGraphLearning/GearNet); the project links its weights on [Zenodo](https://zenodo.org/records/7723075).
 
-## Generated inputs
+The upstream model weights are not redistributed. Feature-generation commands identify the expected model variants and write generated caches under `data/`, which is ignored by Git.
 
-Graph and feature caches are derived data and remain local under `data/processed/`, `data/esm_cache/`, `data/esm_if1_cache/`, and `data/gearnet_cache/`. They are excluded from GitHub and the Zenodo model/results archive. Regeneration commands and expected schemas are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+## Paths and checksums
+
+Sample-table `pdb_path` values are repository-relative, such as `datasets/data/raw/pdb/1A4Y.pdb`; no cluster-specific absolute path is required. `datasets/SHA256SUMS` covers the included dataset files.

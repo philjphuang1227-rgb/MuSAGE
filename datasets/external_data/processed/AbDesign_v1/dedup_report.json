@@ -1,0 +1,11 @@
+{
+  "raw_rows_all_datasets": 1303,
+  "abdesign_ratio_rows": 658,
+  "ready_after_dedup_and_overlap_removal": 654,
+  "overlap_with_existing_benchmarks": 4,
+  "within_source_exact_duplicates_removed": 0,
+  "parse_or_mapping_errors": 0,
+  "errors": [],
+  "pdb_files_available": 14,
+  "label_note": "label is an affinity-ratio-derived proxy at 298 K; do not pool with physical ddG"
+}

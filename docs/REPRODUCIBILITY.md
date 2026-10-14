@@ -12,22 +12,15 @@ pip install -e .
 
 To regenerate GearNet features, also install TorchDrug 0.2.1 and the upstream dependencies described by [GearNet](https://github.com/DeepGraphLearning/GearNet). Checkpoint `mc_gearnet_edge.pth` is available from the [upstream Zenodo record](https://zenodo.org/records/7723075). The core training script consumes cached features and does not require TorchDrug after feature generation.
 
-## 2. Prepare SKEMPI samples
+## 2. Stage the released SKEMPI samples and folds
 
-Download SKEMPI v2.0 and cleaned structures as described in [DATA_PROVENANCE.md](DATA_PROVENANCE.md). Then run:
+The prepared SKEMPI table, WT structures, and fixed complex-level folds are included under `datasets/`. Stage the sample table and folds with:
 
 ```bash
-python scripts/prepare_skempi_full.py \
-  --csv data/raw/SKEMPI2.csv \
-  --pdb-dir data/raw/pdb \
-  --output-dir data/processed/SKEMPI
-
-python scripts/filter_ready_samples.py \
-  --input data/processed/SKEMPI/samples.csv \
-  --output data/processed/SKEMPI/samples_ready.csv
+bash run_scripts/prepare_skempicl_features.sh
 ```
 
-The CSV label convention is `ΔΔG = RT ln(Kd_WT / Kd_mut)` in kcal/mol. The structure parser verifies the WT residue at each mutation site. The ready-sample file must have unique `sample_id` values, nonempty `complex_id`, numeric `ddg`, valid `mutation_sites_json`, and valid PDB paths.
+The sample table has unique IDs, numeric labels, mutation-site records, and repository-relative paths to the bundled PDB files.
 
 ## 3. Build graph and frozen feature inputs
 
@@ -79,7 +72,7 @@ python scripts/build_random_folds.py \
 
 The released architecture is residual-gated, with a 128-unit, four-layer EGNN; dropout 0.1; AdamW (`lr=3e-4`, `weight_decay=1e-4`); batch size 16; Huber loss with δ=1; maximum 100 epochs; validation early stopping patience 12; minimum refit 8 epochs; and gradient norm clipping 5. Exact antisymmetry, pairwise epistasis, and higher-order epistasis are enabled. Other auxiliary losses/features are disabled.
 
-Run one fold first to confirm the external datasets and cached feature files are in place:
+Run one fold after the feature caches have been generated:
 
 ```bash
 python scripts/train_graph_model.py \
@@ -120,3 +113,5 @@ The aggregation script verifies identical sample IDs, fold IDs, and labels acros
 The Zenodo archive contains the released 50 fold checkpoints, original out-of-fold prediction CSVs, seed metrics, mutation-stratified summary, configuration, and checksum manifest. It does not contain SKEMPI CSV/PDB inputs or generated ESM/geometry caches. Follow `SHA256SUMS` in the archive to verify every contained file after extraction.
 
 For a held-out SKEMPI example in fold *k*, use `fold_k/model.pt` from each of the five seeds. The all-fold checkpoint set is not a single full-data deployment model. A production model for new samples requires training on an explicitly declared training set and preserving the same feature-generation pipeline.
+
+

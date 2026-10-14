@@ -9,7 +9,7 @@ Research prediction of mutation-induced binding free-energy changes for protein�
 - Name: MuSAGE (Mutation-Aware Sequence–Structure Antisymmetric Gated Estimator)
 - Task: regression of binding ΔΔG in kcal/mol
 - Inputs: WT complex PDB-derived graph, mutation set, ESM-2, local ESM delta, geometry, ESM-IF1, and GearNet-Edge features
-- Outputs: signed ΔΔG estimate, using `RT ln(Kd_WT / Kd_mut)`
+- Outputs: signed ΔΔG estimate, as recorded in the corresponding dataset units
 - Checkpoints: 50 fold models, 5 seeds × 10 complex-level folds, stored in the linked Zenodo archive
 
 ## Evaluation
@@ -18,4 +18,5 @@ The archive includes per-fold held-out predictions, per-seed metrics, and the mu
 
 ## Limitations
 
-Predictions depend on SKEMPI label quality, mutation-to-PDB mapping, feature extraction versions, and the scope of the training benchmark. The model's sign convention must be checked before comparing with tools that report the opposite ΔΔG sign. Frozen upstream model weights remain governed by their original terms. This release does not include a license grant for the MuSAGE implementation or checkpoints.
+Predictions depend on SKEMPI label quality, mutation-to-PDB mapping, feature extraction versions, and the scope of the training benchmark. For comparisons, use the same dataset-specific target direction and units. Frozen upstream model weights remain governed by their original terms. This release does not include a license grant for the MuSAGE implementation or checkpoints.
+

@@ -24,3 +24,7 @@ paper/figures/
 *.npz
 *.npy
 *.tmp
+
+datasets/**/local_geometry_r12.json
+datasets/**/antimut_ensemble_*
+datasets/data/processed/M1707/structure_graphs_r12_shards/

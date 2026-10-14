@@ -1,0 +1,12 @@
+{
+  "raw_rows": 578,
+  "measured_variant_rows_selected": 387,
+  "ready_after_dedup_and_overlap_removal": 387,
+  "overlap_with_existing_benchmarks": 0,
+  "within_source_exact_duplicates_removed": 0,
+  "parse_or_mapping_errors": 0,
+  "pdb_files_available": 1,
+  "wt_kd": 9.2576609695999e-09,
+  "label_note": "AbDesign v2 Kd-ratio-derived proxy at 298 K; do not pool with physical ddG",
+  "errors": []
+}

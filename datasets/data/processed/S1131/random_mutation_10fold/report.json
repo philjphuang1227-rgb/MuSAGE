@@ -1,0 +1,19 @@
+{
+  "samples": "data/processed/S1131/samples.csv",
+  "n_samples": 1129,
+  "num_folds": 10,
+  "seed": 20260911,
+  "split": "mutation_level_random",
+  "validation_sizes": {
+    "1": 113,
+    "2": 113,
+    "3": 113,
+    "4": 113,
+    "5": 113,
+    "6": 113,
+    "7": 113,
+    "8": 113,
+    "9": 113,
+    "10": 112
+  }
+}

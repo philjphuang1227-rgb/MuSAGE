@@ -1,0 +1,62 @@
+{
+  "samples": "data/processed/S4169/samples.csv",
+  "fold_dir": "data/processed/S4169/random_mutation_5fold_seed20260916",
+  "num_folds": 5,
+  "folds": [
+    {
+      "fold": 1,
+      "train_samples": 3328,
+      "validation_samples": 832,
+      "overlapping_complexes": 153,
+      "overlapping_pdbs": 152,
+      "validation_samples_with_complex_overlap": 805,
+      "validation_complex_overlap_fraction": 0.9675480769230769,
+      "validation_samples_with_pdb_overlap": 805,
+      "validation_pdb_overlap_fraction": 0.9675480769230769
+    },
+    {
+      "fold": 2,
+      "train_samples": 3328,
+      "validation_samples": 832,
+      "overlapping_complexes": 163,
+      "overlapping_pdbs": 162,
+      "validation_samples_with_complex_overlap": 802,
+      "validation_complex_overlap_fraction": 0.9639423076923077,
+      "validation_samples_with_pdb_overlap": 802,
+      "validation_pdb_overlap_fraction": 0.9639423076923077
+    },
+    {
+      "fold": 3,
+      "train_samples": 3328,
+      "validation_samples": 832,
+      "overlapping_complexes": 158,
+      "overlapping_pdbs": 158,
+      "validation_samples_with_complex_overlap": 807,
+      "validation_complex_overlap_fraction": 0.9699519230769231,
+      "validation_samples_with_pdb_overlap": 807,
+      "validation_pdb_overlap_fraction": 0.9699519230769231
+    },
+    {
+      "fold": 4,
+      "train_samples": 3328,
+      "validation_samples": 832,
+      "overlapping_complexes": 166,
+      "overlapping_pdbs": 165,
+      "validation_samples_with_complex_overlap": 813,
+      "validation_complex_overlap_fraction": 0.9771634615384616,
+      "validation_samples_with_pdb_overlap": 813,
+      "validation_pdb_overlap_fraction": 0.9771634615384616
+    },
+    {
+      "fold": 5,
+      "train_samples": 3328,
+      "validation_samples": 832,
+      "overlapping_complexes": 169,
+      "overlapping_pdbs": 168,
+      "validation_samples_with_complex_overlap": 814,
+      "validation_complex_overlap_fraction": 0.9783653846153846,
+      "validation_samples_with_pdb_overlap": 814,
+      "validation_pdb_overlap_fraction": 0.9783653846153846
+    }
+  ]
+}
