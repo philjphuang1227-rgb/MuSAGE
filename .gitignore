@@ -21,6 +21,7 @@ scripts/draw_musage_architecture.py
 paper/figures/
 *.pt
 *.pth
+*.ckpt
 *.npz
 *.npy
 *.tmp

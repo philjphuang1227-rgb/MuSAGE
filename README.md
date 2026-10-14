@@ -39,7 +39,7 @@ The feature-generation commands then build graph and pretrained sequence/structu
 
 ## Training and evaluation
 
-Run the five-seed, ten-fold SKEMPI complex-level training protocol:
+After generating the feature caches in [the reproduction guide](docs/REPRODUCIBILITY.md), run the five-seed, ten-fold SKEMPI complex-level training protocol:
 
 ```bash
 bash run_scripts/train_skempicl_10fold.sh
@@ -53,9 +53,11 @@ bash run_scripts/aggregate_skempicl_oof.sh
 
 External validation inputs and scoring notes are in [`validation/`](validation/README.md). The external sets are frozen evaluation sets and were not used for training or model selection.
 
-## Model weights and results
+## Reproduce by training
 
-The 50 final SKEMPI fold checkpoints, fold predictions, and run summaries are packaged for Zenodo. The Zenodo link will be added here after the draft upload is complete. Checkpoint identities and integrity instructions are documented in [`zenodo/README.md`](zenodo/README.md).
+This release provides source code, datasets, fixed fold assignments, training configuration, and the architecture figure. Trained MuSAGE weights and raw experiment outputs are not distributed. Follow [the reproduction guide](docs/REPRODUCIBILITY.md) to generate features, train the models, and calculate evaluation metrics locally.
+
+Training writes each fold's `model.pt` and `predictions.csv`, together with seed-level `metrics.json`, under `outputs/SKEMPI_CL/`. These files are generated on your computer and are excluded from Git. The guide specifies five training seeds and ten complex-level folds, plus the commands for aggregating held-out predictions.
 
 ## Architecture
 

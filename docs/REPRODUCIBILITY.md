@@ -1,6 +1,6 @@
 # Reproduce the SKEMPI_CL model
 
-This guide reproduces the released five-seed, ten-fold complex-level protocol. It assumes a Linux environment with a CUDA-capable GPU. The release environment targets Python 3.10, PyTorch 2.x, and CUDA 12.1; training uses one GPU, batch size 16, and gradient clipping at 5.
+This guide explains how to reproduce MuSAGE by generating features and training the models from scratch using the included datasets, configuration, and fixed folds. Trained MuSAGE checkpoints and original prediction/result files are not distributed. It assumes a Linux environment with a CUDA-capable GPU. The release environment targets Python 3.10, PyTorch 2.x, and CUDA 12.1; training uses one GPU, batch size 16, and gradient clipping at 5.
 
 ## 1. Install
 
@@ -24,7 +24,7 @@ The sample table has unique IDs, numeric labels, mutation-site records, and repo
 
 ## 3. Build graph and frozen feature inputs
 
-The commands below use the same settings and feature modalities as the released checkpoints. ESM-2 weights are downloaded through fair-esm. Provide local upstream checkpoint paths for ESM-IF1 and GearNet-Edge.
+The commands below use the final model's feature settings. ESM-2 weights are downloaded through fair-esm. Obtain the ESM-IF1 checkpoint from the [official ESM model list](https://github.com/facebookresearch/esm#pre-trained-models) and the GearNet-Edge checkpoint from the upstream source linked in step 1, then replace `/path/to/` with their local paths. These upstream encoders supply frozen features; MuSAGE's own model weights are learned in step 4.
 
 ```bash
 python scripts/cache_structure_graphs.py \
@@ -59,7 +59,7 @@ python scripts/cache_gearnet_features.py \
   --site-cache data/gearnet_cache/sites
 ```
 
-Build the shared complex-level ten-fold assignment:
+The staging step copies the exact complex-level ten-fold assignment used by this protocol. To regenerate the assignment from the supplied sample table, use:
 
 ```bash
 python scripts/build_random_folds.py \
@@ -108,10 +108,10 @@ bash run_scripts/aggregate_skempicl_oof.sh
 
 The aggregation script verifies identical sample IDs, fold IDs, and labels across seeds, then averages the five seed predictions for each held-out sample and computes fold-level and pooled metrics. `scripts/score_predictions.py` can score individual prediction CSVs; `scripts/summarize_multiseed.py` summarizes seed-level reports.
 
-## 6. Checkpoint/result archive
+## 6. Use the locally trained fold models
 
-The Zenodo archive contains the released 50 fold checkpoints, original out-of-fold prediction CSVs, seed metrics, mutation-stratified summary, configuration, and checksum manifest. It does not contain SKEMPI CSV/PDB inputs or generated ESM/geometry caches. Follow `SHA256SUMS` in the archive to verify every contained file after extraction.
+Steps 4 and 5 generate checkpoints, held-out predictions, and metric reports under `outputs/SKEMPI_CL/`. Keep the feature caches, training configuration, and software versions with your local training outputs. Random seeds and fixed folds support repeating the protocol; numerical results can vary with hardware and software versions.
 
-For a held-out SKEMPI example in fold *k*, use `fold_k/model.pt` from each of the five seeds. The all-fold checkpoint set is not a single full-data deployment model. A production model for new samples requires training on an explicitly declared training set and preserving the same feature-generation pipeline.
+For a held-out SKEMPI example in fold *k*, use the locally generated `fold_k/model.pt` from each of the five seeds. The aggregation command in step 5 averages the five matching held-out predictions. Averaging predictions from all 50 models for a benchmark sample would include models trained on that sample's fold and invalidate its held-out evaluation. A model for new samples requires training on an explicitly declared training set and preserving the same feature-generation pipeline.
 
 

@@ -15,6 +15,6 @@ MuSAGE combines frozen sequence/structure priors with a trainable mutation-aware
 
 The feature builders and training code are the source of truth for tensor alignment and shapes. Every cache is keyed by stable sample IDs and mutation sites must map to the same residue indexing in the prepared PDB, graph, and sequence features.
 
-## Scope of released weights
+## Training and fold evaluation
 
-The Zenodo package contains the 50 fold-specific SKEMPI_CL checkpoints. They are cross-validation models, not one model trained on the complete benchmark. For each benchmark sample, use the fold-specific model from each of the five seeds and average those five predictions. Do not average all 50 models for every validation sample because that would include models trained on that sample's fold.
+The five-seed, ten-fold SKEMPI_CL training protocol generates 50 local fold models. The repository provides code and data for training these models; pretrained MuSAGE weights and raw experiment outputs are not distributed. For each benchmark sample, average its held-out predictions from the corresponding fold model across the five seeds. Averaging all 50 models for every validation sample would include models trained on that sample's fold. See [the reproduction guide](REPRODUCIBILITY.md) for feature generation, training, and aggregation commands.
