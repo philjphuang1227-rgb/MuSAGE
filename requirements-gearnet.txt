@@ -1,0 +1,3 @@
+# Optional environment for regenerating GearNet-Edge features only.
+# See docs/DATA_PROVENANCE.md and the upstream GearNet installation notes.
+torchdrug==0.2.1

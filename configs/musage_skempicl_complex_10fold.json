@@ -1,0 +1,53 @@
+{
+  "model_name": "MuSAGE",
+  "benchmark": "SKEMPI v2.0",
+  "profile": "SKEMPI_CL",
+  "split_unit": "complex_id",
+  "folds": 10,
+  "fold_assignment_seed": 20260916,
+  "training_seeds": [20260911, 20260912, 20260913, 20260914, 20260915],
+  "architecture": {
+    "mode": "residual_gated",
+    "backbone": "egnn",
+    "hidden_dim": 128,
+    "egnn_layers": 4,
+    "dropout": 0.1,
+    "esm2_dim": 1280,
+    "geometry_dim": 59,
+    "esm_if1_dim": 512,
+    "gearnet_edge_dim": 3072,
+    "antisymmetric_readout": true,
+    "pairwise_epistasis": true,
+    "higher_order_epistasis": true,
+    "distance_aware_higher_order": false,
+    "interface_hierarchical_pooling": false,
+    "paired_state_delta": false,
+    "uncertainty_head": false
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "gradient_clip_norm": 5.0,
+    "loss": "Huber",
+    "huber_delta": 1.0,
+    "max_epochs": 100,
+    "early_stopping_patience": 12,
+    "min_refit_epochs": 8
+  },
+  "feature_inputs": {
+    "esm2": "ESM-2 t33 650M UR50D mutation-site feature bundle",
+    "local_esm_delta": "ESM-2 t33, 12 Angstrom local delta, sigma 5",
+    "structure_graph": "C-alpha residue graph, 12 Angstrom node radius, 10 Angstrom edge radius",
+    "local_geometry": "59-dimensional geometry descriptors",
+    "esm_if1": "ESM-IF1 GVP 4-layer t16 142M site embeddings",
+    "gearnet_edge": "GearNet-Edge multiview-contrast site embeddings, 3072 dimensions"
+  },
+  "label": {
+    "formula": "RT ln(Kd_WT / Kd_mut)",
+    "temperature": "record temperature; 298.15 K if absent",
+    "unit": "kcal/mol"
+  }
+}

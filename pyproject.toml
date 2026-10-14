@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "musage-ddg"
+version = "1.0.0"
+description = "MuSAGE mutation-aware sequence-structure model for protein-protein binding ΔΔG"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.23",
+  "scipy>=1.9",
+  "scikit-learn>=1.2",
+  "torch>=2.0",
+  "fair-esm>=2.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+
