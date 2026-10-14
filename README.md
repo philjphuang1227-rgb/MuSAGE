@@ -27,7 +27,7 @@ pip install -e .
 
 ## Datasets
 
-Training benchmark inputs, fixed split files, and the external-validation inputs are included under [`datasets/`](datasets/README.md), following the data-first layout used by DSSA-PPI. The included tables and structures are ready to use; their checksums and upstream sources are listed in the dataset guide.
+Training data, SKEMPI subsets, fixed split files, and external-validation inputs are included under [`datasets/`](datasets/README.md). The included tables and structures are ready to use; their checksums and data sources are listed in the dataset guide.
 
 To stage the released SKEMPI sample table and fold assignments for the feature/training scripts:
 

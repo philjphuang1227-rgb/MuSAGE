@@ -1,6 +1,6 @@
 # MuSAGE datasets
 
-This directory follows the data-first organization used by the [DSSA-PPI repository](https://github.com/Agitw/DSSA-PPI): clone the repository, create the Conda environment, use the included benchmark inputs, then train and validate with the scripts in `run_scripts/` and `validation/`.
+This directory contains the training and evaluation data for MuSAGE. Clone the repository, create the Conda environment, prepare features from the included inputs, then train and evaluate using the documented commands.
 
 All table and structure files listed below are included in this repository. Generated graph/embedding caches and model outputs are not included. `SHA256SUMS` records the exact published dataset files.
 
@@ -21,10 +21,10 @@ datasets/
     └── processed/{AB-Bind,AbDesign_v1,AbDesign_v2}/
 ```
 
-## Training and benchmark datasets
+## Training data and SKEMPI subsets
 
 - **SKEMPI v2.0** — `data/raw/SKEMPI2.csv`, cleaned WT PDB structures, processed sample tables, ready-to-train rows, and the fixed ten-fold complex split used by the released experiment. The prepared table contains 6,798 ready samples. The raw table and structures can also be obtained from the [official SKEMPI v2.0 site](https://life.bsc.es/pid/skempi2/database/index).
-- **S4169, S1131, M1707** — public DSSA-PPI benchmark fold files under `data/raw/benchmark_folds/`, processed sample tables, available random folds, and strict-homology split metadata. Source repository: [DSSA-PPI](https://github.com/Agitw/DSSA-PPI). The sample tables contain 4,160, 1,129, and 1,707 rows respectively.
+- **S4169, S1131, M1707** — SKEMPI subsets with input fold CSVs under `data/raw/benchmark_folds/`, processed sample tables, available random folds, and strict-homology split metadata. Their experimental measurements originate from SKEMPI. The sample tables contain 4,160, 1,129, and 1,707 rows respectively.
 
 The exact complex-level SKEMPI split for the final model is `data/processed/SKEMPI/random_complex_10fold_seed20260916/`. Its fold CSVs assign each sample to `train` or `val`; each complex remains in one fold. The separate `random_mutation_*` and `strict_homology_*` folders are alternate benchmark protocols, not the final SKEMPI split.
 

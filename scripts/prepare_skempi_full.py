@@ -48,7 +48,7 @@ def ddg_from_affinity(row: dict[str, str]) -> float:
     temperature_text = first_nonempty(row, "Temperature") or "298.15"
     match = re.search(r"[-+]?\d+(?:\.\d+)?", temperature_text)
     temperature = float(match.group(0)) if match else 298.15
-    # SKEMPI/DSSA convention: ddG = RT ln(Kd_wt / Kd_mut), kcal/mol.
+    # Dataset target: ddG = RT ln(Kd_wt / Kd_mut), kcal/mol.
     return (1.987204258e-3 * temperature) * math.log(wt / mut)
 
 

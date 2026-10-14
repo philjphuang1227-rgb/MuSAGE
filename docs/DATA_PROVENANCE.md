@@ -4,7 +4,7 @@
 
 The repository contains the SKEMPI v2.0 source table, the WT structures used by the prepared benchmark samples, ready-to-train sample tables, and fixed fold assignments under [`datasets/data/`](../datasets/README.md). The preparation report records the original source and row counts with cluster-specific paths removed. The source is also available from the [official SKEMPI v2.0 database](https://life.bsc.es/pid/skempi2/database/index).
 
-S4169, S1131, and M1707 source fold CSVs and prepared sample/fold tables are included under `datasets/data/`; their upstream project is [DSSA-PPI](https://github.com/Agitw/DSSA-PPI). Fixed split files and homology metadata are included so the benchmark definitions can be inspected and reused.
+S4169, S1131, and M1707 are SKEMPI subsets whose experimental measurements originate from the SKEMPI database. Their input fold CSVs and prepared sample/fold tables are included under `datasets/data/`. Fixed split files and homology metadata are included so the evaluation definitions can be inspected and reused.
 
 ## Included external validation data
 

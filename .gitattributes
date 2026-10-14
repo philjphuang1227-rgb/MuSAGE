@@ -1,0 +1,2 @@
+# Keep published dataset bytes stable across operating systems.
+datasets/** text eol=lf
